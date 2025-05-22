@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+LICENSE.chromedriver
+cache/
+THIRD_PARTY_NOTICES.chromedriver
+chromedriver.exe
