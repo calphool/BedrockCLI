@@ -2,13 +2,13 @@
 This small collection of Python scripts basically creates functionality that's missing from the AWS CLI for Model enablement and model enablement status checking.  It uses Selenium/ChromeDriver to mimic missing functionality of the AWS CLI. 
 
 ---
-##Usage:
+## Usage:
 
-###python bedrock_cli.py list-foundation-models-with-enablement-status
+### python bedrock_cli.py list-foundation-models-with-enablement-status
 
 Will return the same output as the AWS CLI when given the list-foundation-models command, but enhances the output with an accessStatus node that tells you the current enablement status of this model.
 
-###python bedrock_cli.py enable-foundation-model "Some model name"
+### python bedrock_cli.py enable-foundation-model "Some model name"
 
 Will walk through the enablement process for a given model.  Optional parameters (required for Anthropic models):
 
@@ -19,7 +19,7 @@ Will walk through the enablement process for a given model.  Optional parameters
 	--external-users
 	--use-case-description
 
-##Notes:
+## Notes:
 
 The login code expects to find three parameters in environment variables: AWS_ACCOUNT_ID, IAM_ADMIN_USER, and IAM_ADMIN_PWD.  If they are not provided, the code will ask for them.  If you use this script as part of an automation, be sure to clear these environment variables immediately after invoking this python program.
 
